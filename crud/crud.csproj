@@ -81,6 +81,7 @@
     <Content Include="asset\css\home-content.css" />
     <Content Include="asset\css\modificar.css" />
     <Content Include="asset\css\form.css" />
+    <Content Include="asset\js\noback.js" />
     <Content Include="error404.aspx" />
     <Content Include="home.aspx" />
     <Content Include="listar.aspx" />

@@ -17,12 +17,12 @@
     <link href="asset/css/modificar.css" rel="stylesheet" />
     <link href="asset/css/home-content.css" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
+    <script src="asset/js/noback.js"></script>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body onload="nobackbutton();">
     <div class="container">
         <div class="sidebar">
             <div class="logo_content">
