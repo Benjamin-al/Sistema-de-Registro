@@ -1,0 +1,21 @@
+﻿.lblform {
+    font-size: 15px
+}
+
+.form {
+    width: 80%;
+    margin: 100px auto;
+    padding: 0px;
+}
+
+.btn {
+    padding: 5px;
+}
+
+.lblerror {
+    color: #c67878
+}
+
+.lblrut {
+    font-size: 12px;
+}

@@ -1,0 +1,161 @@
+﻿@media screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        max-width: 1200px; /*evitamos que se desborde la pantalla*/
+        margin: auto;
+    }
+}
+
+.form-grid {
+    width: 80%;
+    margin: 100px auto;
+    padding: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+    .sidebar.active {
+        width: 240px;
+    }
+
+    .sidebar .logo_content .logo {
+        color: #fff;
+        display: flex;
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+    }
+
+    /*estilo para el logo*/
+    .sidebar .logo_content .logo {
+        opacity: 0;
+        pointer-events: none;
+        justify-content: center;
+    }
+
+    .sidebar.active .logo_content .logo {
+        opacity: 1;
+        pointer-events: none;
+    }
+
+.logo_content .logo i {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    top: 6px;
+    left: 50%;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+    .sidebar ul li {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin: 0 5px;
+        list-style: none;
+        line-height: 50px;
+        border-radius: 12px;
+    }
+
+        .sidebar ul li a {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+            .sidebar ul li a:hover {
+                color: #11101d;
+                background: #fff;
+            }
+
+        .sidebar ul li i {
+            height: 50px;
+            min-width: 50px;
+            border-radius: 12px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+.sidebar .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active .links_name {
+    opacity: 1;
+    pointer-events: none;
+}
+
+/*estilo contenido*/
+.home_content {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+}
+
+    .home_content .text {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 12px;
+    }
+
+.sidebar.active ~ .home_content {
+    width: calc(100% - 240px);
+    left: 240px;
+}
